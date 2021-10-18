@@ -20,7 +20,7 @@ public class Artikl {
         this.kod = kod;
     }
 
-    public String dajNaziv(){ return naziv; }
-    public int dajCijena(){ return cijena; }
-    public String dajKod(){ return kod; }
+    public String getNaziv(){ return naziv; }
+    public int getCijena(){ return cijena; }
+    public String getKod(){ return kod; }
 }
