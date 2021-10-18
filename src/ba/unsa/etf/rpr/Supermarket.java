@@ -22,5 +22,7 @@ public class Supermarket {
                 supermarket[i] = null;
             }
         }
+
+        return izbaceniArtikl;
     }
 }
