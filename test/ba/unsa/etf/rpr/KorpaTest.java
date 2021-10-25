@@ -16,6 +16,16 @@ class KorpaTest {
     }
 
     @Test
+    void dodajArtiklFalse(){
+        Korpa korpa = new Korpa();
+        for(int i=0; i<50; i++){
+            Artikl artikl = new Artikl("Biciklo", 1000, String.valueOf(i));
+            korpa.dodajArtikl(artikl);
+        }
+        assertFalse(korpa.dodajArtikl(new Artikl("Biciklo", 1000, "51")));
+    }
+
+    @Test
     void izbaciArtiklSaKodom() {
         Artikl artikl1 = new Artikl("Biciklo", 1000, "1");
         Artikl artikl2 = new Artikl("Motor", 2500, "2");

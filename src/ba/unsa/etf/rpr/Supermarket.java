@@ -3,13 +3,14 @@ package ba.unsa.etf.rpr;
 public class Supermarket {
     private Artikl[] supermarket = new Artikl[1000];
 
-    public void dodajArtikl(Artikl artikl){
+    public boolean dodajArtikl(Artikl artikl){
         for(int i=0; i<1000; i++){
             if(supermarket[i] == null){
                 supermarket[i] = artikl;
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     public Artikl[] getArtikli(){ return supermarket; }
@@ -24,5 +25,14 @@ public class Supermarket {
         }
 
         return izbaceniArtikl;
+    }
+
+    public int dajVelicinuSupermarketa(){
+        int velicinaSupermarketa = 0;
+        for(Artikl artikl : supermarket){
+            if(artikl != null)
+                velicinaSupermarketa++;
+        }
+        return velicinaSupermarketa;
     }
 }
