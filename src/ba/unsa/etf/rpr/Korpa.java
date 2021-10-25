@@ -7,11 +7,9 @@ public class Korpa {
         for(int i=0; i<50; i++){
             if(korpa[i] == null){
                 korpa[i] = artikl;
-                break;
+                return true;
             }
         }
-        if(korpa.length<=50)
-            return true;
         return false;
     }
 
@@ -38,5 +36,15 @@ public class Korpa {
             }
         }
         return ukupnaCijenaArtikala;
+    }
+
+    public int dajVelicinuKorpe(){
+        int velicinaKorpe = 0;
+        for(Artikl artikl : korpa){
+            if(artikl != null)
+                velicinaKorpe++;
+        }
+
+        return velicinaKorpe;
     }
 }
